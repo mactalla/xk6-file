@@ -133,13 +133,13 @@ func (*FILE) RemoveRowsBetweenValues(path string, start, end int) error {
 }
 
 // ReadFile returns the content as a string
-func (*FILE) ReadFile(path string) (data string, err error) {
-    data := ""
+func (*FILE) ReadString(path string) (data string, err error) {
+    data = ""
     bytes, err := os.ReadFile(path)
     if err != nil {
         return
     }
 
-    data := string(bytes)
+    data = string(bytes)
     return
 }

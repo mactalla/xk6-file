@@ -9,6 +9,7 @@ export default function () {
     // Write/append string to file
     file.writeString(filepath, 'New file. First line.\n');
     file.appendString(filepath, `Second line. VU: ${__VU}  -  ITER: ${__ITER}`);
+    file.readString(filepath);
 
     // Remove rows from text file/clear file content/delete file
     file.removeRowsBetweenValues(filepath, 2, 2);
